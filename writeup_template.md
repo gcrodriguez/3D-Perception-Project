@@ -13,13 +13,7 @@
 
 You're reading it!
 
-### Exercise 1, 2 and 3 pipeline implemented
-#### 1. Complete Exercise 1 steps. Pipeline for filtering and RANSAC plane fitting implemented.
-
-#### 2. Complete Exercise 2 steps: Pipeline including clustering for segmentation implemented.  
-
-#### 2. Complete Exercise 3 Steps.  Features extracted and SVM trained.  Object recognition implemented.
-Here is an example of how to include an image in your writeup.
+### Exercise 1, 2 and 3 pipeline implemented 
 
 Completing the three mentioned exercises gave the base to implement the code and identify the object as project requisition. Without training and learning with these exercises make the object identification was practically an impossible task. After implementing all filtering steps, RANSAC algorithm, cluster segmentation and a lot of try and error, the parameters presneted in the table below were achieved and considered reasonable for object recognition. The objects segmented and clustered are shown in the images of the final of this section with their identification, showing the success of the algorithm.
 
@@ -34,15 +28,42 @@ The first step was to capture the objects and then train them to verify the accu
 After defining 10 positions for each object (and then it can be concluded that this quantity was satisfactory) and changing to hsv method, the next task was to identify which of the classifiers would result in better accuracy of the results. By verifying the linear, rbf, poly and sigmoid classifiers through the results presented in the images below, it was possible to conclude that the linear classifier gave the most accurate results, allowing the greater distinction between the objects.
 
 Linear
+
 ![image-2](https://github.com/gcrodriguez/3D-Perception-Project/blob/master/exercicio3_confusematrix_com_histogram_10capturas_hsv_linear.png)
 
-![image-3](https://github.com/gcrodriguez/3D-Perception-Project/blob/master/exercicio3_confusematrix_com_histogram_10capturas_hsv_linear.png)
+![image-3](https://github.com/gcrodriguez/3D-Perception-Project/blob/master/results_com_histogram_10capturas_hsv_linear.png)
 
+Poly
 
+![image-4](https://github.com/gcrodriguez/3D-Perception-Project/blob/master/exercicio3_confusematrix_com_histogram_10capturas_hsv_poly.png)
 
+![image-5](https://github.com/gcrodriguez/3D-Perception-Project/blob/master/results_com_histogram_10capturas_hsv_poly.png)
 
+RBF
 
-![demo-1](https://user-images.githubusercontent.com/20687560/28748231-46b5b912-7467-11e7-8778-3095172b7b19.png)
+![image-6](https://github.com/gcrodriguez/3D-Perception-Project/blob/master/exercicio3_confusematrix_com_histogram_10capturas_hsv_rbf.png)
+
+![image-7](https://github.com/gcrodriguez/3D-Perception-Project/blob/master/results_com_histogram_10capturas_hsv_rbf.png)
+
+Sigmoid
+
+![image-8](https://github.com/gcrodriguez/3D-Perception-Project/blob/master/exercicio3_confusematrix_com_histogram_10capturas_hsv_sigmoid.png)
+
+![image-9](https://github.com/gcrodriguez/3D-Perception-Project/blob/master/results_com_histogram_10capturas_hsv_sigmoid.png)
+
+With the mentioned parameters and linear classifier the objects could be correctly segmented, clustered and identiied as can be observed in the images below.
+
+Object Segmentation
+
+![image-10](https://github.com/gcrodriguez/3D-Perception-Project/blob/master/object_recon.png)
+
+Object clustering
+
+![image-11](https://github.com/gcrodriguez/3D-Perception-Project/blob/master/object_recon_cluster.png)
+
+Point cloud
+
+![image-12](https://github.com/gcrodriguez/3D-Perception-Project/blob/master/point_cloud.png)
 
 ### Pick and Place Setup
 
