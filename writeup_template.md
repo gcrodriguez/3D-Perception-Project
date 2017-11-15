@@ -69,6 +69,19 @@ Point cloud
 
 ### Pick and Place Setup
 
+For the project code, initially it was used the same method, parameters and classifier. When running it the results obtained were terrible. Then it was clear that the parameters had to change and more of try and error was necessary. Adding also the outlier filter in order to eliminate the thrash points, the parameters of the table below ere obtained.
+
+Leaf Size | z axis min | z axis max | Cluest Tol. | Min. Cluster Size | Max. Cluster Size 
+--- | --- | --- | --- | --- | ---
+0.005 | 0.06 | 2.0 | 0.05 | 0.05 | 50 | 1500 
+
+
+
+
+
+
+
+
 #### 1. For all three tabletop setups (`test*.world`), perform object recognition, then read in respective pick list (`pick_list_*.yaml`). Next construct the messages that would comprise a valid `PickPlace` request output them to `.yaml` format.
 
 And here's another image! 
