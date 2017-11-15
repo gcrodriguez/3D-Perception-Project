@@ -51,7 +51,7 @@ Sigmoid
 
 ![image-9](https://github.com/gcrodriguez/3D-Perception-Project/blob/master/results_com_histogram_10capturas_hsv_sigmoid.png)
 
-With the mentioned parameters and linear classifier the objects could be correctly segmented, clustered and identiied as can be observed in the images below.
+With the mentioned parameters and linear classifier, the objects could be correctly segmented, clustered and identified as can be observed in the images below.
 
 Object Segmentation
 
@@ -64,6 +64,8 @@ Object clustering
 Point cloud
 
 ![image-12](https://github.com/gcrodriguez/3D-Perception-Project/blob/master/point_cloud.png)
+
+ ####Note: After a while, the create object moves from its position and then vanish (this identificantion was not possible anymore). But, in the cluesterd objects image, this was object was identified. Probably this is an error and it was not taken into account.
 
 ### Pick and Place Setup
 
