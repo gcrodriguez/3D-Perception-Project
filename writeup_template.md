@@ -23,8 +23,8 @@ Here is an example of how to include an image in your writeup.
 
 Completing the three mentioned exercises gave the base to implement the code and identify the object as project requisition. Without training and learning with these exercises make the object identification was practically an impossible task. After implementing all filtering steps, RANSAC algorithm, cluster segmentation and a lot of try and error, the parameters presneted in the table below were achieved and considered reasonable for object recognition. The objects segmented and clustered are shown in the images of the final of this section with their identification, showing the success of the algorithm.
 
-Leaf Size | z axis min | z axis max | Cluest Tol. | Min. Cluster Size | Max. Cluster Size | 
-0.01 | 0.77 | 1.1 | 0.01 | 0.05 | 50 | 1500 |
+Leaf Size | z axis min | z axis max | Cluest Tol. | Min. Cluster Size | Max. Cluster Size  
+0.01 | 0.77 | 1.1 | 0.01 | 0.05 | 50 | 1500 
 
 
 
