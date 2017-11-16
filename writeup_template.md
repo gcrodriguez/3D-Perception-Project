@@ -72,7 +72,7 @@ Point cloud
 For the project code, initially it was used the same method, parameters and classifier. When running it the results obtained were terrible. Then it was clear that the parameters had to change and more of try and error was necessary. Adding also the outlier filter in order to eliminate the thrash points, the parameters of the table below ere obtained.
 
 Leaf Size | z axis min | z axis max | Cluest Tol. | Min. Cluster Size | Max. Cluster Size | Threshold Scale Factor | Number of Neighoubourin Points
---- | --- | --- | --- | --- | ---
+--- | --- | --- | --- | --- | --- | --- | ---
 0.005 | 0.06 | 2.0 | 0.05 | 400 | 2000 | 0.005 | 5
 
 While these parameters worked fined for the first scenario (world 1) detecting all objects, they don't work well for the second scenario (world 2). Smaller objects like glue and soap2 were not detected, as can be observed in the image below. By changing the  min. cluster size to 350, all parameters were identified. However, glue and book were classified as stick notes.
@@ -126,7 +126,7 @@ From the images above, it can be observed that the linear classifier doesn't giv
 For the parameters of the last table and With the more accurate classifier, it was possible to identify correctly the majority of the objects with exception of the glue. So to fix it, the min. cluster size was reduced to 150 (table updated below) and then glue was finely identified as can be observed in the following images of the three scenarios (objects clusterd and recognized).
 
 Leaf Size | z axis min | z axis max | Cluest Tol. | Min. Cluster Size | Max. Cluster Size | Threshold Scale Factor | Number of Neighoubourin Points
---- | --- | --- | --- | --- | ---
+--- | --- | --- | --- | --- | --- | --- | ---
 0.005 | 0.06 | 2.0 | 0.05 | 150 | 2000 | 0.005 | 5
 
 Scenario 1
