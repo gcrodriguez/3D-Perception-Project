@@ -75,11 +75,11 @@ Leaf Size | z axis min | z axis max | Cluest Tol. | Min. Cluster Size | Max. Clu
 --- | --- | --- | --- | --- | --- | --- | ---
 0.005 | 0.06 | 2.0 | 0.05 | 400 | 2000 | 0.005 | 5
 
-While these parameters worked fined for the first scenario (world 1) detecting all objects, they don't work well for the second scenario (world 2). Smaller objects like glue and soap2 were not detected, as can be observed in the image below. By changing the  min. cluster size to 350, all parameters were identified. However, glue and book were classified as stick notes.
+While these parameters worked fined for the first scenario (world 1) detecting all objects, they don't work well for the second scenario (world 2). Smaller objects like glue and soap2 were not detected, as can be observed in the image below. By changing the  min. cluster size to 350, all objects could be identified. However, glue and book were wrongly recognized as stick notes.
 
 ![image-13](https://github.com/gcrodriguez/3D-Perception-Project/blob/master/identify_world2_incomplete.png)
 
-What to do? There was no other option but increase the quantity of the objects captured positions, train and evaluate better the classifiers. By changing the quantity from 10 to 15, the results obtained by the classifiers can be observed below (the results of the 10 captured positions are also presnted in order to give the notion of the classifier's accuracy evolution).
+What to do? There was no other option but increase the quantity of the objects captured positions, train and evaluate better the classifiers. By changing the quantity from 10 to 15, the results obtained by the classifiers can be observed below (the results of the 10 captured positions are also presented in order to give the notion of the classifier's accuracy evolution).
 
 LINEAR 
 
@@ -121,9 +121,9 @@ SIGMOID
 
 ![image-21](https://github.com/gcrodriguez/3D-Perception-Project/blob/master/results_sigmoid_15__.png)
 
-From the images above, it can be observed that the linear classifier doesn't give the more accurate results anymore (it increased from 0.8125 to 0.8333). However, rbf and sigmoid presented considerable increase on it accuracy score, from 0.8375 to 0.9333 and from 0.8125 to 0.925, respectively. Poly gave the worst results. After that, it was clear that the classifier shall be changed to rbf or sigmoid (rbf was chosen as it has the more accurate result).
+From the above images, it can be observed that the linear classifier no longer provides more accurate results (increased from 0.8125 to 0.8333). However, rbf and sigmoid showed a considerable increase in accuracy score, from 0.8375 to 0.9333 and from 0.8125 to 0.925, respectively. Poly gave the worst results. After that, it was clear that the classifier should be changed to rbf or sigmoid (the rbf was chosen because it has the most accurate result).
 
-For the parameters of the last table and With the more accurate classifier, it was possible to identify correctly the majority of the objects with exception of the glue. So to fix it, the min. cluster size was reduced to 150 (table updated below) and then glue was finely identified as can be observed in the following images of the three scenarios (objects clusterd and recognized).
+For the parameters of the last table and with the more accurate classifier, it was possible to identify correctly the majority of the objects with exception of the glue. So to fix it, the min. cluster size was reduced to 150 (table updated below) and then glue was finally identified, as can be observed in the following images of the three scenarios (objects clusterd and recognized). The main goal of the project was then achieved with results below.
 
 Leaf Size | z axis min | z axis max | Cluest Tol. | Min. Cluster Size | Max. Cluster Size | Threshold Scale Factor | Number of Neighoubourin Points
 --- | --- | --- | --- | --- | --- | --- | ---
