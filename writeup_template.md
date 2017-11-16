@@ -121,6 +121,8 @@ SIGMOID
 
 ![image-21](https://github.com/gcrodriguez/3D-Perception-Project/blob/master/results_sigmoid_15__.png)
 
+From the images above, it can be observed that the linear classifier doesn't give the more accurate results anymore (it increased from 0.8125 to 0.8333). However, rbf and sigmoid presented considerable increase on it accuracy score, from 0.8375 to 0.9333 and from 0.8125 to 0.925, respectively. Poly gave the worst results. After that, it was clear that the classifier shall be changed to rbf or sigmoid (rbf was chosen as it has the more accurate result).
+
 
 
 
