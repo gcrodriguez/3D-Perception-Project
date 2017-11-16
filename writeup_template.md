@@ -125,6 +125,10 @@ From the images above, it can be observed that the linear classifier doesn't giv
 
 For the parameters of the last table and With the more accurate classifier, it was possible to identify correctly the majority of the objects with exception of the glue. So to fix it, the min. cluster size was reduced to 150 (table updated below) and then glue was finely identified as can be observed in the following images of the three scenarios (objects clusterd and recognized).
 
+Leaf Size | z axis min | z axis max | Cluest Tol. | Min. Cluster Size | Max. Cluster Size | Threshold Scale Factor | Number of Neighoubourin Points
+--- | --- | --- | --- | --- | ---
+0.005 | 0.06 | 2.0 | 0.05 | 150 | 2000 | 0.005 | 5
+
 Scenario 1
 
 ![image-22](https://github.com/gcrodriguez/3D-Perception-Project/blob/master/cluster_world_1.png)
@@ -138,7 +142,7 @@ Scenario 3
 ![image-24](https://github.com/gcrodriguez/3D-Perception-Project/blob/master/cluster_world_3.png)
 
 
-
+ ####Note: Parts of the boxes were wrongly detected as snacks. Even if the parameters were modified, in order to recognize all objects, it was not possible to get rid of these 'snacks'.
 
 
 #### 1. For all three tabletop setups (`test*.world`), perform object recognition, then read in respective pick list (`pick_list_*.yaml`). Next construct the messages that would comprise a valid `PickPlace` request output them to `.yaml` format.
