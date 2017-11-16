@@ -19,7 +19,7 @@ Completing the three mentioned exercises gave the base to implement the code and
 
 Leaf Size | z axis min | z axis max | Cluest Tol. | Min. Cluster Size | Max. Cluster Size 
 --- | --- | --- | --- | --- | ---
-0.01 | 0.77 | 1.1 | 0.01 | 0.05 | 50 | 1500 
+0.01 | 0.77 | 1.1 | 0.05 | 50 | 1500 
 
 The first step was to capture the objects and then train them to verify the accuracy and appropriate classifier that should be implemented to achieve a reasonable object identification. For the first attempts, 5 different positions were stipulated for each object. Considering the linear classifier and rgb method, the first results showed bad results (as image below) indicating the necessity of more different positions. 
 
@@ -71,10 +71,55 @@ Point cloud
 
 For the project code, initially it was used the same method, parameters and classifier. When running it the results obtained were terrible. Then it was clear that the parameters had to change and more of try and error was necessary. Adding also the outlier filter in order to eliminate the thrash points, the parameters of the table below ere obtained.
 
-Leaf Size | z axis min | z axis max | Cluest Tol. | Min. Cluster Size | Max. Cluster Size 
+Leaf Size | z axis min | z axis max | Cluest Tol. | Min. Cluster Size | Max. Cluster Size | Threshold Scale Factor | Number of Neighoubourin Points
 --- | --- | --- | --- | --- | ---
-0.005 | 0.06 | 2.0 | 0.05 | 0.05 | 50 | 1500 
+0.005 | 0.06 | 2.0 | 0.05 | 400 | 2000 | 0.005 | 5
 
+While these parameters worked fined for the first scenario (world 1) detecting all objects, they don't work well for the second scenario (world 2). Smaller objects like glue and soap2 were not detected, as can be observed in the image below. By changing the  min. cluster size to 350, all parameters were identified. However, glue and book were classified as stick notes.
+
+![image-13](https://github.com/gcrodriguez/3D-Perception-Project/blob/master/identify_world2_incomplete.png)
+
+What to do? There was no other option but increase the quantity of the objects captured positions, train and evaluate better the classifiers. By changing the quantity from 10 to 15, the results obtained by the classifiers can be observed below (the results of the 10 captured positions are also presnted in order to give the notion of the classifier's accuracy evolution).
+
+LINEAR 
+
+10 positions
+
+![image-14](https://github.com/gcrodriguez/3D-Perception-Project/blob/master/results_linear_10.png)
+
+15 positions
+
+![image-15](https://github.com/gcrodriguez/3D-Perception-Project/blob/master/results_linear_15__.png)
+
+POLY
+
+10 positions
+
+![image-16](https://github.com/gcrodriguez/3D-Perception-Project/blob/master/results_poly_10.png)
+
+15 positions
+
+![image-17](https://github.com/gcrodriguez/3D-Perception-Project/blob/master/results_poly_15__.png)
+
+RBF 
+
+10 positions
+
+![image-18](https://github.com/gcrodriguez/3D-Perception-Project/blob/master/results_rbf_10.png)
+
+15 positions
+
+![image-19](https://github.com/gcrodriguez/3D-Perception-Project/blob/master/results_rbf_15__.png)
+
+SIGMOID
+
+10 positions
+
+![image-20](https://github.com/gcrodriguez/3D-Perception-Project/blob/master/results_sigmoid_10.png)
+
+15 positions
+
+![image-21](https://github.com/gcrodriguez/3D-Perception-Project/blob/master/results_sigmoid_15__.png)
 
 
 
